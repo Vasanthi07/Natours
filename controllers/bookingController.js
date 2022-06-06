@@ -38,6 +38,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 });
 
 exports.createBookingCheckout = catchAsync(async (req, res, next) => {
+  //security is  not yet implemented....
   const { tour, user, price } = req.query;
   if (!tour && !user && !price) return next();
 
